@@ -8,7 +8,7 @@ namespace CheckoutUnitTest
     public class PaymentProviderTests
     {
         [TestMethod]
-        public void Test001_Take_Payment()
+        public void Test001_Payment_Successful()
         {
             // arrange
             var paymentProvider = new PaymentProvider();
@@ -22,7 +22,7 @@ namespace CheckoutUnitTest
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
-        public void Test002_Product_Creation_Invalid_Zero_Price()
+        public void Test002_Payment_Creation_Invalid_Zero_Price()
         {
             // arrange
             var paymentProvider = new PaymentProvider();
@@ -33,7 +33,7 @@ namespace CheckoutUnitTest
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
-        public void Test003_Product_Creation_Invalid_Negative_Price()
+        public void Test003_Payment_Creation_Invalid_Negative_Price()
         {
             // arrange
             var paymentProvider = new PaymentProvider();

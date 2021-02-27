@@ -27,5 +27,13 @@ namespace CheckoutUnitTest
             // arrange
             var product = new Product("Apples", 0);
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void Test003_Product_Creation_Missing_Name()
+        {
+            // arrange
+            var product = new Product("", 10);
+        }
     }
 }
