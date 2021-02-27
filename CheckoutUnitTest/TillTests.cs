@@ -16,22 +16,8 @@ namespace CheckoutUnitTest
         {
         }
 
-
         [TestMethod]
-        public void Test001_PaymentProvider_Take_Payment_Successfully()
-        {
-            // arrange
-            IPaymentProvider paymentProvider = new PaymentProvider();
-
-            // act
-            var successfulPayment = paymentProvider.TakePayment(100.00m);
-
-            // assert
-            Assert.IsTrue(successfulPayment);
-        }
-
-        [TestMethod]
-        public void Test002_Till_Take_Payment_Successfully()
+        public void Test001_Till_Take_Payment_Successfully()
         {
             // arrange
             IBasket basket = new Basket();
@@ -50,7 +36,7 @@ namespace CheckoutUnitTest
         }
 
         [TestMethod]
-        public void Test003_Till_Take_Payment_With_Customer_Discount_Successfully()
+        public void Test002_Till_Take_Payment_With_Customer_Discount_Successfully()
         {
             // arrange
             IBasket basket = new Basket();
